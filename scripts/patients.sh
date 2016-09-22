@@ -11,3 +11,13 @@ curl --include --request POST http://localhost:3000/patients \
       "sickness": "Starring in the dope show"
     }
   }'
+
+# Update
+  curl --include --request PATCH http://localhost:3000/patients/2 \
+    --header "Content-Type: application/json" \
+    --data '{
+      "patient": {
+        "name": "Fox Mulder",
+        "sickness": "Too spooky"
+      }
+    }'
