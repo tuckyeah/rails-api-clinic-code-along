@@ -21,3 +21,8 @@ curl --include --request POST http://localhost:3000/patients \
         "sickness": "Too spooky"
       }
     }'
+
+# Destroy
+
+curl --include --request DELETE http://localhost:3000/patients/6 \
+  --header "Content-Type: application/json"
